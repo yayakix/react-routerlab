@@ -1,7 +1,17 @@
+import {Link} from 'react-router-dom'
+import stonks from '../data';
+
+
+
 function Stocks(){
+
     return (
       <>
-        <h1>this is stonks page</h1>
+      {stonks.map((stoink, index) => (
+        <Link key={index} to={`/stonks/${stoink.symbol}`}>
+          <h2>{stoink.name}</h2>
+        </Link>
+      ))}
       </>
     );
 }

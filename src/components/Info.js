@@ -1,4 +1,4 @@
-function Dashboard() {
+function Info() {
   return (
     <>
       <h1>this is header page</h1>
@@ -6,4 +6,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Info;

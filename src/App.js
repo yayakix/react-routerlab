@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Stocks from './components/Stocks';
+import Info from './components/Info';
 
 function App() {
   return (
@@ -23,6 +24,13 @@ function App() {
         <Route exact path="/stonks">
           <Stocks />
         </Route>
+        <Route exact path="/info/:symbol" render={(props) => <Info {...props} /> }/>
+        {/* props spreading */}
+
+        {/* render props provide 3 objects
+        history, location (query params), match(info on url params) 
+         */}
+      
       </Switch>
     </div>
   );
