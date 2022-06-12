@@ -9,8 +9,11 @@ const Info = props => {
   return (
     <>
       {stonk.name}
+      <br></br>
       {stonk.symbol}
-      {stonk.name}
+      <br></br>
+
+      {stonk.lastPrice}
     </>
   );
 
