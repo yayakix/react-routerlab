@@ -6,7 +6,7 @@ import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
-import Stocks from './components/Stocks';
+import Dashboard from "./components/Dashboard";
 import Info from './components/Info';
 
 function App() {
@@ -21,16 +21,21 @@ function App() {
         <Route exact path="/about">
           <About />
         </Route>
+
         <Route exact path="/stonks">
-          <Stocks />
+          <Dashboard />
         </Route>
-        <Route exact path="/info/:symbol" render={(props) => <Info {...props} /> }/>
+
+        <Route
+          exact
+          path="/info/:symbol"
+          render={(props) => <Info {...props} />}
+        />
         {/* props spreading */}
 
         {/* render props provide 3 objects
         history, location (query params), match(info on url params) 
          */}
-      
       </Switch>
     </div>
   );
